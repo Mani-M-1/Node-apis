@@ -44,6 +44,13 @@ app.use((req, res, next) => {
     next();
 })
 
+//to see get request in cyclic i have written this code
+app.get("/", (req, res, next)=>{
+    res.json({
+        name:"hello",
+        message:"i am working"
+    })
+})
 
 //using routes 
 app.use('/products', productsRoute);
